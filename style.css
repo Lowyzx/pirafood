@@ -1,0 +1,126 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+    transition: all 0.5s linear;
+    color: white;
+    text-transform: capitalize;
+}
+body{
+    background-color: #1A1110;
+}
+header{
+    position: relative;
+    padding: 2em 0;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url(img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+.logo{
+    font-size: 2em;
+    font-weight: 600;
+    flex: 1;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 70px;
+    margin-right: 1%;
+}
+.navbar{
+    width: 100%;
+    padding: 2em 3rem;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+    top: 0;
+    position: fixed;
+}
+.nav_items{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+}
+.item{
+    display: flex;
+    justify-content: center;
+}
+.nav_items li{
+    list-style: none;
+    padding: 1em;
+}
+.nav_items li a{
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.nav_items li::before{
+    content: '';
+    width: 0;
+    height: 2px;
+    background: orangered;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav_items li:hover::before{
+    width: 100%;
+}
+.btn{
+    padding: 9px 15px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    background-color: orangered;
+    border: 2px solid orangered;
+    transition: all 0.5s ease-out;
+}
+.nav_menu{
+    display: none;
+}
+.main{
+    width: 80%;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    color: white;
+}
+.heading_1{
+    font-size: 2.3em;
+}
+.heading{
+    font-size: 3.5em;
+    padding: 1.5% 0;
+}
+.main_btn{
+    display: flex;
+}
+.btn:hover{
+    background-color: transparent;
+}
+.btn2{
+    background-color: transparent;
+    margin-left: 1%;
+    align-items: center;
+    display: flex;
+}
+.btn2 i{
+    font-size: 2em;
+    margin-right: 6px;
+    color: orangered;
+}
+.btn2:hover{
+    background-color: orangered;
+}
+.btn2:hover i{
+    color: white;
+}

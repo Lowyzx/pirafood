@@ -1,0 +1,230 @@
+@font-face {
+    font-family: Open_Sans_Bold;
+    src: url(../fonts/OpenSans-Bold.ttf);
+}
+@font-face {
+    font-family: Open_Sans;
+    src: url(../fonts/OpenSans-Regular.ttf);
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    background-color: orangered;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+#logo {
+    height: 15vh;
+    width: auto;
+    margin-left: 4vw;
+    margin-top: 40vh;
+    z-index: 2;
+    transform: rotate(0.25turn);
+}
+#font1 {
+    font-family: Open_Sans_Bold;
+    font-size: 7vw;
+    color: orangered;
+    margin-top: 39vh;
+    margin-left: 0vw;
+    z-index: 2;
+}
+#font2 {
+    font-family: Open_Sans_Bold;
+    font-size: 7vw;
+    color: orangered;
+    margin-top: 39vh;
+    z-index: 2;
+}
+.voltar {
+    width: 10vw;
+    height: 6vh;
+    position: absolute;
+    margin-left: 88vw;
+    margin-top: 5vh;
+    background-color: white;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    font-size: 1.5vw;
+    cursor: pointer;
+    color: gray;
+    transition: 0.2s ease-in-out;
+}
+section {
+    width: 40vw;
+    height: 100vh;
+    position: absolute;
+    background-color: gray;
+    border-right: 10px solid white;
+}
+h1 {
+    position: absolute;
+    margin-left: 53vw;
+    margin-top: 4vh;
+    color: white;
+    text-decoration: underline;
+    font-family: Open_Sans_Bold;
+    text-wrap: nowrap;
+    font-size: 3vw;
+}
+form {
+    position: absolute;
+    width: 40vw;
+    height: 79vh;
+    margin-left: 52vw;
+    margin-top: 20vh;
+}
+form #campos {
+    background-color: #ffffff;
+    border: 1px solid transparent;
+    border-radius: 14px;
+    width: 80%;
+    height: 7vh;
+    margin-bottom: 4vh;
+    font-family: Open_Sans_Bold;
+    font-size: 1.1vw;
+    color: gray;
+}
+#checkzin {
+    width: 2vw;
+    height: 2.7vh;
+    background-color: #ffffff;
+}
+label {
+    font-size: 1.6vw;
+    color: #ffffff;
+}
+#criar {
+    margin-left: 60vw;
+    margin-top: 82vh;
+    width: 12vw;
+    height: 8vh;
+    position: absolute;
+}
+#criar button {
+    width: 12vw;
+    height: 8vh;
+    background-color: white;
+    border: 1px solid transparent;
+    color: gray;
+    border-radius: 16px;
+    font-size: 1.5vw;
+    transition: 0.2s ease-in-out;
+}
+button[type = 'submit']{
+    width: 33vw;
+    height: 5vh;
+    background-color: white;
+    border: 1px solid transparent;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+button[type = 'submit']:hover{
+    transform: scale(1.02);
+    border: 1px solid black;
+    transition: 0.2s ease-in-out;
+}
+@media screen and (max-width:480px){
+    main {
+        background-color: #2258A1;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    #logo {
+        display: none;
+    }
+    #font1 {
+        display: none;
+
+    }
+    #font2 {
+        display: none;
+
+    }
+    .voltar {
+        width: 30vw;
+        height: 6vh;
+        position: absolute;
+        margin-left: 37vw;
+        margin-top: 12vh;
+        background-color: orangered;
+        border: 1px solid transparent;
+        border-radius: 15px;
+        font-size: 4vw;
+        cursor: pointer;
+        color: white;
+        transition: 0.2s ease-in-out;
+        z-index: 3;
+    }
+    .voltar:hover {
+        background-color: orangered;
+        transform: scale(1.01);
+        transition: 0.2s ease-in-out;
+    }
+    section {
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        background-color: orangered;
+        border-right: 10px solid white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+    }
+    h1 {
+        position: absolute;
+        margin-left: 0vw;
+        margin-top: 4vh;
+        color: white;
+        text-decoration: underline;
+        font-family: Open_Sans_Bold;
+        text-wrap: nowrap;
+        font-size: 7vw;
+    }
+    form {
+        position: absolute;
+        width: 100vw;
+        height: 79vh;
+        margin-left: 0vw;
+        margin-top: 20vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    form #campos {
+        background-color: #ffffff;
+        border: 1px solid transparent;
+        border-radius: 14px;
+        width: 80vw;
+        height: 7vh;
+        margin-bottom: 4vh;
+        font-family: Open_Sans_Bold;
+        font-size: 4vw;
+        color: gray;
+    }
+    #checkzin {
+        width: 6vw;
+        height: 6vh;
+        background-color: #ffffff;
+    }
+    label {
+        font-size: 5vw;
+        color: #ffffff;
+    }
+    #criar {
+        margin-left: 0vw;
+        margin-top: 80vh;
+        width: auto;
+        height: auto;
+        position: absolute;
+    }
+}
