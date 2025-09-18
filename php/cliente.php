@@ -6,8 +6,11 @@ $email = $_POST['email'];
 $senha = $_POST['senha'];
 $cpf   = $_POST['cpf'];
 
-$sql->query("INSERT INTO cliente(nome, email, senha, cpf) VALUES('$nome', '$email', '$senha', '$cpf')");
+$dados = $sql->prepare("INSERT INTO cliente (nome, email, senha, cpf) VALUES (?, ?, ?, ?)");
+$dados->bind_param("ssss", $nome, $email, $senha, $cpf);
+$dados->execute();
 
-echo "Dados salvos com sucesso!!";
+header("Location: ../html/cadastro.html");
+exit();
 ?>
 

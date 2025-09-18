@@ -12,6 +12,8 @@ CREATE TABLE pratos(
     id int AUTO_INCREMENT PRIMARY KEY,
     nome_prato VARCHAR(100),
     descricao VARCHAR(255),
-    preco DOUBLE(10,7)
+    preco DOUBLE(10,7),
+    imagem VARCHAR(255)
 );
 select * from cliente;
+drop table pratos;
