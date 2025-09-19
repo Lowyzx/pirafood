@@ -39,8 +39,8 @@
     </table>
     <?php } else {
                     echo "<div id='erro'>Nenhum prato cadastrado.</div>";
-                    echo "<button onclick=window.location.href='../index.html'>Voltar</button>";
                 } ?>
                 </main>
+                <button onclick="window.location.href='../index.html'">Voltar</button>
 </body>
 </html>

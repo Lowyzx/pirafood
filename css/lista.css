@@ -7,7 +7,7 @@ body{
 }
 main{
     width: 90vw;
-    height: 90vh;
+    height: 85vh;
     margin-left: 5vw;
     margin-top: 5vh;
     display: flex;
@@ -27,10 +27,23 @@ button{
     border-radius: 16px;
     cursor: pointer;
     margin-top: 1vh;
+    margin-left: 40vw;
 }
 h1{
     font-size: 2.5em;
 }
 #erro{
     font-size: 1.5em;
+}
+table{
+    width: 90vw;
+    height: auto;
+    border-collapse: collapse;
+    padding: 12px;
+    text-align: center;
+    font-size: 1.3em;
+}
+th,td{
+    border: 2px solid white;
+    padding: 12px;
 }
