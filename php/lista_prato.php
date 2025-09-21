@@ -22,6 +22,7 @@
                 <th>Descrição</th>
                 <th>Preço</th>
                 <th>Imagem</th>
+                <th colspan="2">Ações</th>
             </tr>
                 <?php while($row = $result->fetch_assoc()){ ?>
                     <tr>
@@ -30,10 +31,19 @@
                         <td><?php echo $row['descricao']; ?></td>
                         <td><?php echo $row['preco']; ?></td>
                         <td>
-                            <?php if (!empty($row['imagem'])) { ?>
-                                <img src="<?php echo htmlspecialchars($row['imagem']); ?>" alt="Imagem do prato" style="max-width: 120px; height: auto;" />
+                            <?php if (!empty($row['imagem'])) { 
+                                $imgSrc = $row['imagem'];
+                                $base = basename($imgSrc);
+                                $abs = dirname(__DIR__) . DIRECTORY_SEPARATOR . 'pratos_imagem' . DIRECTORY_SEPARATOR . $base;
+                                if (is_file($abs)) {
+                                    $imgSrc .= '?v=' . filemtime($abs);
+                                }
+                            ?>
+                                <img src="<?php echo htmlspecialchars($imgSrc); ?>" alt="Imagem do prato" style="max-width: 120px; height: auto;" />
                             <?php } else { echo '-'; } ?>
                         </td>
+                        <td><a href="editar_prato.php?id=<?php echo $row['id']; ?>">Editar</a></td>
+                        <td><a href="excluir_prato.php?id=<?php echo $row['id']; ?>">Excluir</a></td>
                     </tr>
                 <?php } ?>
     </table>
